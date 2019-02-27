@@ -1,4 +1,5 @@
 ROM=Xebec-103684C-1986.bin
+AS=asl
 
 all:: install-pt4.asm xebec-c800.asm xebec-iosel.asm
 
@@ -13,3 +14,6 @@ xebec-iosel.bin: $(ROM)
 
 xebec-iosel.asm: xebec-iosel.bin labels.txt entry-iosel.txt data-iosel.txt
 	disasm -o 0xc700 -e entry-iosel.txt -l labels.txt -d data-iosel.txt $< > $@
+
+install-pt4.lst: install-pt4.asm
+	$(AS) -cpu 6502 -L $<
