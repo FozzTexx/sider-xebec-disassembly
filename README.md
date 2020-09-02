@@ -1,3 +1,5 @@
+*Update 2019-Mar-2*: Michael McMaster was able to make the scsi2sd compatible with the Sider/Xebec card!
+
 This is an attempt to disassemble the ROM and installation tools for a
 First Class Peripherals Sider hard drive made for an Apple II and the
 ROM on the Xebec SASI card that was included with the hard drive.
