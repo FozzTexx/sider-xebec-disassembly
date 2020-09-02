@@ -17,3 +17,9 @@ xebec-iosel.asm: xebec-iosel.bin labels.txt entry-iosel.txt data-iosel.txt
 
 install-pt4.lst: install-pt4.asm
 	$(AS) -cpu 6502 -L $<
+
+#HelloProdos.asm: HelloProdos.bin labels.txt
+#	disasm -o 0x0800 -e 0x0800 -l labels.txt $< > $@
+
+ProdosBooter.asm: PRODOS\#061000
+	disasm -o 0x800 -l labels.txt $< > $@

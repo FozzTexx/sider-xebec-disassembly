@@ -9,3 +9,7 @@ contains no controller and the 6502 on the Apple II is used to bit
 bang all I/O on the data and control lines. Hopefully understanding
 how the software works on the Apple II will make it possible to get
 the scsi2sd card completely working.
+
+You'll need my disassembler to create the .asm files:
+
+* https://github.com/FozzTexx/disasm
